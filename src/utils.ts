@@ -1,9 +1,15 @@
 import { IsGreenDelivery, FilterValidProductsForDelivery, GetDeliveryDates, deliveryScheduleResponse, filterValidProductsConfig } from "./types.js";
 
+/***
+ * The method determine green delivery dates and consider all Wednesdays as green delivery dates
+ */
 export const isGreenDelivery: IsGreenDelivery = (date) => {
     return date.getDay() === 3;
 };
 
+/***
+ * The method determine whether a product is valid for delivery on a specific deliveryDate
+ */
 export const filterValidProductsForDelivery: FilterValidProductsForDelivery = (props: filterValidProductsConfig) => {
     const { products, deliveryDate, today } = props;
     return products.filter((product) => {

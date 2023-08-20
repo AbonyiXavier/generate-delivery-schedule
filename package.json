@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon --ext ts --watch src --exec 'ts-node --esm ./src/main.ts'",
     "type-check": "tsc",
-    "test-unit": "jest tests/unit"
+    "test": "jest tests/unit"
   },
   "devDependencies": {
     "@types/express": "^4.17.17",
