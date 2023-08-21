@@ -1,4 +1,4 @@
-import { IsGreenDelivery, FilterValidProductsForDelivery, GetDeliveryDates, deliveryScheduleResponse, filterValidProductsConfig } from "./types.js";
+import { IsGreenDelivery, FilterValidProductsForDelivery, filterValidProductsConfig, GetDeliveryDates, deliveryScheduleResponse } from "../types.js";
 
 /***
  * The method determine green delivery dates and consider all Wednesdays as green delivery dates

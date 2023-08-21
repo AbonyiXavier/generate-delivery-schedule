@@ -1,5 +1,5 @@
 import { expect, it } from '@jest/globals';
-import { filterValidProductsForDelivery, getDeliveryDates, isGreenDelivery } from '../../src/utils';
+import { filterValidProductsForDelivery, getDeliveryDates, isGreenDelivery } from '../../src/services/deliverySchedule.service';
 import { ProductType } from '../../src/enums';
   
 

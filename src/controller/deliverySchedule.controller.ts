@@ -1,7 +1,7 @@
 
 import { Request, Response } from 'express';
 import { deliverySchedule } from '../types.js';
-import { getDeliveryDates } from '../utils.js';
+import { getDeliveryDates } from '../services/deliverySchedule.service.js';
 
 
 export const generateDeliverySchedule = (req: Request, res: Response) => {
