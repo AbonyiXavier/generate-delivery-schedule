@@ -42,10 +42,10 @@ describe('isGreenDelivery', () => {
 
     it('returns true for date 5th and 15 of each month', () => {
       const fifthDayOfMonth = new Date('2023-08-05');
-      const fifteenthhDayOfMonth = new Date('2023-08-15');
+      const fifteenthDayOfMonth = new Date('2023-08-15');
 
       expect(isGreenDelivery(fifthDayOfMonth)).toBe(true);
-      expect(isGreenDelivery(fifteenthhDayOfMonth)).toBe(true);
+      expect(isGreenDelivery(fifteenthDayOfMonth)).toBe(true);
   });
 });
 
