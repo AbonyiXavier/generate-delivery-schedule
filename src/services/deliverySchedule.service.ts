@@ -49,7 +49,6 @@ export const getDeliveryDates: GetDeliveryDates = (postalCode, products) => {
         deliveryDate.setDate(today.getDate() + i);
 
         const isGreen = isGreenDelivery(deliveryDate);
-        const isGreenWithinThreeDays = isGreen && i < 3;
 
         const payload: filterValidProductsConfig = {
             products,
@@ -59,7 +58,7 @@ export const getDeliveryDates: GetDeliveryDates = (postalCode, products) => {
 
         filterValidProductsForDelivery(payload);
 
-        if (isGreenWithinThreeDays) {
+        if (isGreen) {
             availableDates.unshift({
                 postalCode,
                 deliveryDate: deliveryDate.toISOString(),
