@@ -20,14 +20,14 @@ describe('isGreenDelivery', () => {
         expect(isGreenDelivery(wednesday)).toBe(true);
     });
 
-    it('returns true for a Thursday', () => {
+    it('returns false for a Thursday', () => {
         const thursday = new Date('2023-08-24');
         expect(isGreenDelivery(thursday)).toBe(false);
     });
 
     it('returns true for a Friday', () => {
         const friday = new Date('2023-08-25');
-        expect(isGreenDelivery(friday)).toBe(false);
+        expect(isGreenDelivery(friday)).toBe(true);
     });
 
     it('returns false for a Saturday', () => {
@@ -39,6 +39,14 @@ describe('isGreenDelivery', () => {
         const sunday = new Date('2023-08-27');
         expect(isGreenDelivery(sunday)).toBe(false);
     });
+
+    it('returns true for date 5th and 15 of each month', () => {
+      const fifthDayOfMonth = new Date('2023-08-05');
+      const fifteenthhDayOfMonth = new Date('2023-08-15');
+
+      expect(isGreenDelivery(fifthDayOfMonth)).toBe(true);
+      expect(isGreenDelivery(fifteenthhDayOfMonth)).toBe(true);
+  });
 });
 
 describe('filterValidProductsForDelivery', () => {

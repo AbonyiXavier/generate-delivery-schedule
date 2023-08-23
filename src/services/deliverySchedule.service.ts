@@ -1,10 +1,13 @@
 import { IsGreenDelivery, FilterValidProductsForDelivery, filterValidProductsConfig, GetDeliveryDates, deliveryScheduleResponse } from "../types.js";
 
 /***
- * The method determine green delivery dates and consider all Wednesdays as green delivery dates
+ * The method determine green delivery dates and consider all Wednesdays or 
+ * consider 5th, 15th and 25th of each month as green delivery dates
  */
 export const isGreenDelivery: IsGreenDelivery = (date) => {
-    return date.getDay() === 3;
+    const dayOfMonth = date.getDate();
+    const dayOfWeek = date.getDay(); 
+    return dayOfWeek === 3 || [5, 15, 25].includes(dayOfMonth);
 };
 
 /***
